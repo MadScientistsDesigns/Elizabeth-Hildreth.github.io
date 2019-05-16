@@ -1,0 +1,178 @@
+/* CSS for Responsive Web Design Projects - Build a Personal Portfolio Webpage
+Elizabeth Hildreth
+4/29/2019 */
+
+body {
+    font-family: 'ABeeZee', sans-serif;
+    background-color: #525151;
+}
+
+/* User Story #10: The height of the welcome section should be equal to 
+    the height of the viewport */
+.welcome {
+    height: 779px;
+    background-image: url(software-3682509_1920.jpg);
+    background-repeat: repeat;
+    background-color: #525151;
+    background-position: center; /* Center the image */
+    background-blend-mode: screen;  
+    color: white;
+    text-shadow: 8px 8px 16px #000000;
+    text-align: center;
+    /* background-size: cover; */
+}
+
+.welcome h1 {
+    font-weight: bolder;
+    padding-top: 30%;
+    font-size: 54px;
+    /* font-family: 'Philosopher', sans-serif; */
+    font-family: 'Rye', cursive;
+}
+
+.welcome h3 {
+    font-family: 'Philosopher', sans-serif;
+}
+
+.navbar-brand {
+    /* font-family: 'Philosopher', sans-serif; */
+    font-family: 'Rye', cursive;
+    /* font-family: 'Faster One', cursive; */
+    /* font-family: 'Rakkas', cursive; */
+    /* font-family: 'UnifrakturCook', cursive; */
+    /* font-family: 'Jacques Francois Shadow', cursive;
+    font-family: 'Aref Ruqaa', serif;
+    font-family: 'Berkshire Swash', cursive;
+    font-family: 'Fondamento', cursive; */
+}
+
+/* projects section */
+#projects {
+    /* background-image: url(software-3682509_1920.jpg); */
+    background-repeat: repeat;
+    background-size: cover;
+    background-color: #525151;
+    background-position: center; /* Center the image */    
+    background-blend-mode: screen; 
+    margin-top: 0px; 
+}
+
+.card {
+    max-width: 320px; 
+    border: 1px solid darkslategray; 
+}
+
+.card-footer {
+    background-color: white;
+    width: 100%;
+}
+
+.button {
+    background-color: darkslategray;
+    border: none;
+    border-radius: 40%;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .button:hover {
+    background-color: rgb(23, 92, 34);
+    color: white;
+    text-decoration: none;
+}
+
+.card-img-top {
+    width: 100%; 
+    height: auto;
+}
+
+/* contact section alignment */
+.contact {
+    background-color: #222;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.contact a {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.contact h3 {
+    font-weight: bold;
+    font-size: 35px;
+    color: #000000;
+}
+
+
+/* animation */
+ /* WebKit and Opera browsers */
+ @-webkit-keyframes spinner {
+    from { -webkit-transform: rotateY(0deg);    }
+    to   { -webkit-transform: rotateY(-360deg); }
+  }
+
+  /* all other browsers */
+  @keyframes spinner {
+    from {
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to {
+      -moz-transform: rotateY(-360deg);
+      -ms-transform: rotateY(-360deg);
+      transform: rotateY(-360deg);
+    }
+  }
+
+  #stage {
+    margin: 1em auto;
+    -webkit-perspective: 2000px;
+    -moz-perspective: 2000px;
+    -ms-perspective: 2000px;
+    perspective: 2000px;
+  }
+
+  #spinner {
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 8s;
+
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  #spinner:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+
+
+/* User Story #9: My portfolio should have at least one media query */
+@media (max-width: 520px) {
+    #projects {
+        background-repeat: repeat;
+    }
+    h1 {
+        padding-top: 60%;
+    }
+    .welcome {
+        height: 740px;
+    }
+}
